@@ -7,6 +7,7 @@
 		"@types/jest": "^25.1.4",
 		"@types/node": "^13.9.1",
 		"@types/uuid": "^7.0.0",
+		"@types/yup": "^0.26.32",
 		"gql2ts": "^1.10.1",
 		"jest": "^25.1.0",
 		"nodemon": "^2.0.2",
@@ -14,23 +15,26 @@
 		"ts-node": "^6.2.0",
 		"tslint": "^6.1.0",
 		"tslint-config-prettier": "^1.18.0",
-		"typescript": "3.8.3"
+		"typescript": "3.8.3",
+		"yup": "^0.28.3"
 	},
 	"dependencies": {
+		"@types/glob": "^7.1.1",
 		"bcryptjs": "^2.4.3",
+		"glob": "^7.1.6",
 		"graphql": "^14.6.0",
 		"graphql-import": "^1.0.0-beta.2",
 		"graphql-request": "^1.8.2",
 		"graphql-tools": "^4.0.7",
 		"graphql-yoga": "^1.18.3",
+		"merge-graphql-schemas": "^1.7.6",
 		"pg": "^7.18.2",
 		"reflect-metadata": "^0.1.13",
-		"typeorm": "0.2.24",
-		"uuid": "^7.0.2"
+		"typeorm": "0.2.24"
 	},
 	"scripts": {
 		"start": "NODE_ENV=development nodemon --exec ts-node src/index.ts",
-		"test": "NODE_ENV=test jest",
+		"test": "NODE_ENV=test jest --forceExit",
 		"gen-schema-types": "gql2ts src/schema.graphql -o src/types/schema.d.ts"
 	},
 	"jest": {
